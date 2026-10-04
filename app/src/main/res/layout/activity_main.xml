@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FB"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- HEADER -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="Prompt Engineering Lab"
+            android:textColor="#172554"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="25dp"
+            android:gravity="center"
+            android:text="Compare prompting techniques and response quality"
+            android:textColor="#64748B"
+            android:textSize="14sp" />
+
+        <!-- INPUT -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. ENTER YOUR TASK"
+            android:textColor="#172554"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/taskInput"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_marginTop="8dp"
+            android:background="#FFFFFF"
+            android:gravity="top|start"
+            android:hint="Example: Explain Artificial Intelligence in simple words"
+            android:inputType="textMultiLine"
+            android:padding="15dp"
+            android:textColor="#1E293B"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/generateButton"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="15dp"
+            android:text="GENERATE PROMPTS"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/clearButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="CLEAR"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <!-- TECHNIQUES -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="2. PROMPTING TECHNIQUES"
+            android:textColor="#172554"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+        <!-- ZERO SHOT CARD -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="ZERO-SHOT"
+            android:textColor="#2563EB"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/zeroShotText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:text="No examples are provided. The model receives only the task."
+            android:textColor="#334155"
+            android:textSize="14sp" />
+
+        <!-- FEW SHOT CARD -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="FEW-SHOT"
+            android:textColor="#7C3AED"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/fewShotText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:text="Examples are provided to guide the expected response."
+            android:textColor="#334155"
+            android:textSize="14sp" />
+
+        <!-- STEP BY STEP CARD -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="STEP-BY-STEP"
+            android:textColor="#059669"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/reasoningText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:text="The task is divided into logical steps."
+            android:textColor="#334155"
+            android:textSize="14sp" />
+
+        <!-- RESPONSE SECTION -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="3. RESPONSE PREVIEW"
+            android:textColor="#172554"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/zeroShotResponse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#E8F0FE"
+            android:padding="16dp"
+            android:text="Zero-Shot Response Preview"
+            android:textColor="#1E293B"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/fewShotResponse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#F1EAFE"
+            android:padding="16dp"
+            android:text="Few-Shot Response Preview"
+            android:textColor="#1E293B"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/reasoningResponse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#E7F8F1"
+            android:padding="16dp"
+            android:text="Step-by-Step Response Preview"
+            android:textColor="#1E293B"
+            android:textSize="14sp" />
+
+        <!-- COMPARISON -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="4. QUALITY COMPARISON"
+            android:textColor="#172554"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/comparisonText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"
+            android:background="#FFFFFF"
+            android:padding="18dp"
+            android:text="Generate prompts to see the comparison."
+            android:textColor="#334155"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</ScrollView>
